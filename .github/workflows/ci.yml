@@ -41,11 +41,8 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: build-artifacts
-          path: |
-            build
-            package.json
-            package-lock.json
-          retention-days: 1
+      - name: Debug files
+        run: find . -maxdepth 3 | sort
       - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
