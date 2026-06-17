@@ -56,8 +56,9 @@ jobs:
           sudo apt install rsync -y
       - name: Deploy to VPS
         run: |
-          rsync -avz ./ ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_IP }}:${{ secrets.DEPLOY_PATH }}/build
-          rsync -avz package.json package-lock.json ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_IP }}:${{ secrets.DEPLOY_PATH }}/
+          rsync -avz build/ ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_IP }}:${{ secrets.DEPLOY_PATH }}/build/
+          rsync -avz package.json package-lock.json \
+            ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_IP }}:${{ secrets.DEPLOY_PATH }}/
       - name: Install production dependencies
         run: |
           ssh ${{ secrets.VPS_USERNAME }}@${{ secrets.VPS_IP }} \
