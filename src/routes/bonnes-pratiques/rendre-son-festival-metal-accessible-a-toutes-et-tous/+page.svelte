@@ -81,7 +81,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="flex-1">
+		<div class="flex-1 sticky top-24 self-start">
 			{#each menu as item, i (i)}
 				<a
 					href={'#' + item.id}

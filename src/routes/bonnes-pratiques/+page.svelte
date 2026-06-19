@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { formatDate } from '$lib/index.js';
+	import bgAccueil from '$lib/assets/bg_accueil.png';
 
 	let { data } = $props();
 
@@ -31,64 +32,21 @@
 	);
 </script>
 
+<div class="page-wrapper">
+	<img src={bgAccueil} alt="" class="bg-accueil" aria-hidden="true" />
 <div class="pt-24">
 	<section class="px-16 py-24">
 		<h2 class="uppercase text-[150px] leading-[80%] text-theme-blue text-center">
 			Bonnes pratiques
 		</h2>
 		<div class="flex flex-col gap-24">
-			<div class="flex gap-4 justify-center">
-				<div class="flex rounded-5xl border border-white/20 overflow-hidden p-1">
-					<div>
-						<input
-							type="radio"
-							name="filter"
-							id="filter_all"
-							value="all"
-							class="peer sr-only"
-							checked
-						/>
-						<label
-							for="filter_all"
-							class="px-4 py-2 bg-theme-black text-theme-white cursor-pointer peer-checked:bg-theme-blue peer-checked:text-theme-black rounded-5xl block"
-							>Tous</label
-						>
-					</div>
-					<div>
-						<input
-							type="radio"
-							name="filter"
-							id="filter2"
-							value="Bonnes pratiques"
-							class="peer sr-only"
-						/>
-						<label
-							for="filter2"
-							class="px-4 py-2 bg-theme-black text-theme-white cursor-pointer peer-checked:bg-theme-blue peer-checked:text-theme-black rounded-5xl block"
-							>Bonnes pratiques</label
-						>
-					</div>
-					<div>
-						<input
-							type="radio"
-							name="filter"
-							id="filter3"
-							value="Nouveautés"
-							class="peer sr-only"
-						/>
-						<label
-							for="filter3"
-							class="px-4 py-2 bg-theme-black text-theme-white cursor-pointer peer-checked:bg-theme-blue peer-checked:text-theme-black rounded-5xl block"
-							>Nouveautés</label
-						>
-					</div>
-				</div>
+			<div class="flex justify-center">
 				<input
 					type="text"
 					name="search"
 					id="search"
 					placeholder="Rechercher..."
-					class="text-white/70 px-4.5 bg-theme-black border border-white/20 rounded-4xl py-2"
+					class="text-white/70 px-4.5 bg-theme-black border border-white/60 rounded-4xl py-2 w-full max-w-[500px]"
 				/>
 			</div>
 			<div class="flex gap-10">
@@ -132,7 +90,7 @@
 						</a>
 					{/each}
 				</div>
-				<div class="flex-1 flex flex-col gap-10 text-theme-white">
+				<div class="flex-1 flex flex-col gap-10 text-theme-white sticky top-24 self-start">
 					<div class="flex flex-col gap-6">
 						<h3 class="text-4.5xl leading-none">Filtrer</h3>
 						<hr />
@@ -186,3 +144,21 @@
 		</div>
 	</section>
 </div>
+</div>
+
+<style>
+	.page-wrapper {
+		position: relative;
+	}
+
+	.bg-accueil {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		mix-blend-mode: screen;
+		pointer-events: none;
+		z-index: 0;
+	}
+</style>
