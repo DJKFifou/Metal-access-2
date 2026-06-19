@@ -1,4 +1,5 @@
 <script>
+	import bgAccueil from '$lib/assets/bg_accueil.png';
 	let sectionShowed = $state('a-propos');
 
 	const menu = [
@@ -8,6 +9,8 @@
 	];
 </script>
 
+<div class="page-wrapper">
+	<img src={bgAccueil} alt="" class="bg-accueil" aria-hidden="true" />
 <div class="pt-24">
 	<section class="px-16 py-24">
 		<h2 class="uppercase text-[150px] leading-[80%] text-theme-blue text-center">La fédé</h2>
@@ -121,7 +124,7 @@
 					</div>
 				{/if}
 			</div>
-			<div class="flex-1">
+			<div class="flex-1 sticky top-24 self-start">
 				{#each menu as item, i (i)}
 					<button
 						onclick={() => (sectionShowed = item.id)}
@@ -145,3 +148,21 @@
 		</div>
 	</section>
 </div>
+</div>
+
+<style>
+	.page-wrapper {
+		position: relative;
+	}
+
+	.bg-accueil {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		mix-blend-mode: screen;
+		pointer-events: none;
+		z-index: 0;
+	}
+</style>

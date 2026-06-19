@@ -1,9 +1,11 @@
 <script>
 	import arrowRightBlue from '$lib/assets/arrow-right-blue.svg';
+	import elementDecoSecLast from '$lib/assets/element_deco_sec_last.svg';
 </script>
 
-<section class="px-16 py-24 flex flex-col gap-16">
-	<div class="flex flex-col gap-16 max-w-1/2">
+<section class="relative px-16 py-24 flex flex-col gap-16">
+	<img src={elementDecoSecLast} alt="" aria-hidden="true" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0" />
+	<div class="relative z-[1] flex flex-col gap-16 max-w-1/2">
 		<h2 class="text-7xl text-theme-white leading-none">
 			<span class="text-theme-blue">Tout ce qu'il vous faut</span>, <br /> prêt à déployer
 		</h2>
@@ -21,7 +23,7 @@
 			</a>
 		</div>
 	</div>
-	<div class="flex gap-16 text-theme-white">
+	<div class="relative z-[1] flex gap-16 text-theme-white">
 		<a
 			href="/signaletique"
 			class="px-8 py-16 flex flex-col gap-16 border border-theme-lightGrey group transition-all duration-300 hover:border-theme-blue hover:bg-theme-blue/20 cursor-pointer"

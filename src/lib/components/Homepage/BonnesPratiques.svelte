@@ -1,10 +1,15 @@
-<section class="px-16 flex flex-col gap-10 py-48">
-	<h2 class="text-7xl leading-none text-theme-white">
+<script>
+	import elementDeco from '$lib/assets/element_deco.png';
+</script>
+
+<section class="relative px-16 flex flex-col gap-10 py-48">
+	<img src={elementDeco} alt="" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0" aria-hidden="true" />
+	<h2 class="relative z-[1] text-7xl leading-none text-theme-white">
 		<span class="text-theme-blue"> Qu'est-ce que l'accessibilité </span>
 		<br />
 		pour un festival ?
 	</h2>
-	<div>
+	<div class="relative z-[1]">
 		<div
 			class="flex justify-between items-center gap-16 border-b border-theme-white w-full px-16 h-33"
 		>
