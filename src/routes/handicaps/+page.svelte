@@ -1,4 +1,5 @@
 <script>
+	import bgTexture from '$lib/assets/bg_texture.png';
 	import pictoMoteur from '$lib/assets/handicaps/picto-moteur.svg';
 	import pictoVisuel from '$lib/assets/handicaps/picto-visuel.svg';
 	import pictoAuditif from '$lib/assets/handicaps/picto-auditif.svg';
@@ -21,7 +22,13 @@
 	];
 </script>
 
-<div class="pt-24">
+<div class="pt-24 relative">
+	<img
+		src={bgTexture}
+		alt=""
+		aria-hidden="true"
+		class="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-50 mix-blend-screen"
+	/>
 	<section class="px-16 py-24">
 		<h2 class="uppercase text-[150px] leading-[80%] text-theme-blue text-center">Les handicaps</h2>
 		<div class="pt-32 flex gap-22">
