@@ -37,7 +37,7 @@
 		L'accessibilité au <br />
 		<span class="inline-flex">
 			c
-			<img src={coeur} alt="Coeur" class="w-30 h-30" />
+			<img src={coeur} alt="Coeur" class="w-30 h-30 heart" class:heart-beat={animate} />
 			eur
 		</span>
 		du <span class="text-theme-blue">festival</span>
@@ -79,5 +79,22 @@
 			opacity: 1;
 			transform: translateY(0);
 		}
+	}
+
+	.heart {
+		display: inline-block;
+	}
+
+	.heart.heart-beat {
+		animation: heartbeat 1.6s ease-in-out infinite;
+		animation-delay: 0.7s;
+	}
+
+	@keyframes heartbeat {
+		0%, 100% { transform: scale(1); }
+		15% { transform: scale(1.12); }
+		30% { transform: scale(1); }
+		45% { transform: scale(1.08); }
+		65% { transform: scale(1); }
 	}
 </style>

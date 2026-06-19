@@ -367,7 +367,7 @@
 				<div class="grid grid-cols-2 gap-4">
 					{#each result.recs as rec, i}
 						<div
-							class="cascade-in rec-card {i === result.recs.length - 1 &&
+							class="cascade-in rec-card group border border-white/[0.08] bg-theme-darkGrey transition-all duration-300 hover:border-theme-blue hover:bg-theme-blue/20 {i === result.recs.length - 1 &&
 							result.recs.length % 2 !== 0
 								? 'col-span-2'
 								: ''}"
@@ -382,7 +382,7 @@
 								{/if}
 							</div>
 							<div
-								class="border border-white/30 w-8 h-8 flex items-center justify-center text-white/60 shrink-0 self-start"
+								class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 border border-theme-blue w-8 h-8 flex items-center justify-center text-theme-blue shrink-0 self-start"
 							>
 								<span aria-hidden="true">↗</span>
 							</div>
@@ -521,7 +521,6 @@
 		align-items: flex-start;
 		gap: 1rem;
 		padding: 1.25rem;
-		background-color: var(--color-theme-darkGrey);
-		border: 1px solid rgba(255, 255, 255, 0.08);
+		cursor: pointer;
 	}
 </style>
