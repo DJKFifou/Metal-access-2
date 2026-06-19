@@ -1,0 +1,30 @@
+<svg width="208" height="52" viewBox="0 0 208 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_g_1131_613)">
+<g clip-path="url(#clip0_1131_613)">
+<rect width="204" height="48" transform="translate(2 2)" fill="#00BFFF"/>
+<text fill="#171717" style="white-space: pre" xml:space="preserve" font-family="Fledora Dirtyn" font-size="16" letter-spacing="0em"><tspan x="40.3438" y="23.7">D&#xc9;COUVRIR MON &#10;</tspan><tspan x="18.3438" y="39.7">NIVEAU D&#39;ACCESSIBILIT&#xc9;</tspan></text>
+<g filter="url(#filter1_f_1131_613)">
+<rect x="20.0615" y="-105.323" width="13" height="203.077" transform="rotate(31.7019 20.0615 -105.323)" fill="white"/>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_g_1131_613" x="0" y="0" width="208" height="52" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.011312217451632023 0.0099999997764825821" numOctaves="3" seed="9234" />
+<feDisplacementMap in="shape" scale="4" xChannelSelector="R" yChannelSelector="G" result="displacedImage" width="100%" height="100%" />
+<feMerge result="effect1_texture_1131_613">
+<feMergeNode in="displacedImage"/>
+</feMerge>
+</filter>
+<filter id="filter1_f_1131_613" x="-97.6553" y="-116.323" width="139.777" height="201.608" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="5.5" result="effect1_foregroundBlur_1131_613"/>
+</filter>
+<clipPath id="clip0_1131_613">
+<rect width="204" height="48" fill="white" transform="translate(2 2)"/>
+</clipPath>
+</defs>
+</svg>

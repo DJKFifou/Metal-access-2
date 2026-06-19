@@ -12,3 +12,11 @@ export async function initSwiper(element, options = {}) {
 		...options
 	});
 }
+
+export function formatDate(dateString) {
+	return new Intl.DateTimeFormat('fr-FR', {
+		day: 'numeric',
+		month: 'long',
+		year: 'numeric'
+	}).format(new Date(dateString));
+}
