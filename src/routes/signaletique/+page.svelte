@@ -318,7 +318,7 @@
 						>
 							{selectedRessources.length}
 						</span>
-						<span class="text-theme-white/75 leading-[150%]"
+						<span class="text-theme-white/75 leading-[150%] whitespace-nowrap"
 							>{selectedRessources.length > 1 ? 'éléments sélectionnés' : 'élément sélectionné'}
 						</span>
 						<span class="w-px h-full bg-white/15"></span>
